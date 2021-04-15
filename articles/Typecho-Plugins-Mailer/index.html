@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Mailer加持，让博客体验更完善 - Sean&#39;s Blog</title>
+  
+    <meta name="keywords" content="技术向,网站,体验,新尝试,Mailer,Typecho">
+  
+
+  
+    <meta name="description" content="现在，你可以收到评论回复啦！">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Sean's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+</head>
+
+  <body>
+    
+
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Sean’s Blog
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/who-am-i/
+                  
+                  
+                  
+                    id="who-am-i"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tos/
+                  
+                  
+                  
+                    id="tos"
+                  >
+                  <i class='fas fa-book fa-fw'></i>ToS
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>昼夜切换
+                </a>
+              <li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search some things..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/who-am-i/
+                  
+                  
+                  
+                    id="who-am-i"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tos/
+                  
+                  
+                  
+                    id="tos"
+                  >
+                  <i class='fas fa-book fa-fw'></i>ToS
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>昼夜切换
+                </a>
+              <li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div class='cover-bg lazyload placeholder' data-bg="https://bing.ioliu.cn/v1/rand?w=1920&h=1200"></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Sean’ Blog</p>
+    
+    
+      <p class="subtitle">乘风破浪</p>
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="Search some things..." />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Mailer加持，让博客体验更完善
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/pems002/Main@master/favicon/logo.JPG">
+    <p>Sean</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%AD%A6%E8%AE%B0/">学记</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年3月10日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2.6k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：12分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p>[notice]从建立这个博客开始，自始至终都没有说会想过未来真的会有人读你写的东西，甚至给你留下评论。[/notice]</p>
+<p><strong>前言</strong></p>
+<p>好吧当时其实也没有想太多，因为对这个邮件回复其实是有一些误解。这是怎么回事呢：</p>
+<blockquote>
+<p>我一直认为：想让Typecho给你自动发送邮件来跟踪你的评论消息其实很困难。</p>
+</blockquote>
+<p>但是就在昨天晚上，我不知道怎么的，就访问别的大佬的站内，看一些文章。偶尔一下就发现，他写到的有关邮件回复的文章：<a target="_blank" rel="noopener" href="https://blog.zggsong.cn/archives/1082.html">邮件评论回复插件</a>这时我也想到了为何不尝试一下这样的“新鲜事”呢 :@(深思) <del>Maybe在我看来这已经很新鲜了好嘛</del>说做就做！</p>
+<p><strong>过程</strong></p>
+<p>参照教程，看着看着就感觉不对了，咦！怎么是熊猫小A写的，正好我的主题也是他写的！<del>鬼晓得当时我居然没发现这个插件</del>就正好给我的小站整上个“全家桶” :@(赞一个) </p>
+<p>首先说一下我搭建前的一个环境：Typecho我使用的是最新的正式版本，但听说只有开发版才有这个插件所需要的接口，所以说只能将你的博客站升级到开发版后才能使用这个插件。哦对了忘记介绍了，这次的插件就是它：<a target="_blank" rel="noopener" href="https://blog.imalan.cn/archives/349/">Mailer：又一款评论邮件提醒插件</a></p>
+<p>不过呢在安装之前，首先做的事就是要[notice]<strong>备份！</strong> <strong>备份！</strong> <strong>备份！</strong>[/notice]因为开发板和正式版不同，一旦出现问题数据无价！<del>经历了惨痛崩坏的我，说多了都是泪 :@(装大款) </del></p>
+<ol>
+<li>前往<a target="_blank" rel="noopener" href="http://typecho.org/download">Typecho官方网站下载页</a>找到开发版下载</li>
+<li>下载<code>build</code>文件，将原网站目录下的<code>admin</code> <code>var</code> <code>index.php</code>删除。</li>
+<li>解压<code>build</code>文件后，将<code>admin</code> <code>var</code> <code>index.php</code>重新粘贴至网站目录上传，即可。</li>
+<li>打开博客站后台，可以发现升级的提示，点击升级</li>
+</ol>
+<blockquote>
+<p>升级到开发版后，其实观察了一下，并没有什么太大变化，原来启用的插件/主题都可以使用。不过新增加了直接预览还未发布的文章，这点倒是挺好的，虽然说文本编辑页也是有预览的，但效果显然没有这个好，这边点个赞！ ::(真棒) </p>
+</blockquote>
+<p>接下来我们就可以安装插件了，前往插件的<a target="_blank" rel="noopener" href="https://github.com/AlanDecode/Typecho-Plugin-Mailer">Github</a>页面，下载后上传至网站根目录<code>usr</code>中的<code>Plugin</code>文件夹下。<br>[notice]一定要更改解压后的文件夹名为Mailer否则会出现 <code>Database 500 error</code>报错问题[/notice]</p>
+<p>接下来配置插件很重要。这边我另外提一下，我使用了QQ的域名邮箱服务，且我去了解到域名邮箱也是有SMTP服务的，可以作为发件邮箱，这样就免去了企业邮箱或绑定域名邮箱的必须，但如果你也有同样的SMTP邮箱服务，也可以使用，这边只是介绍一下其实QQ邮箱还是有这个服务的，既然有的话就利用起来也是不错哒 ::(滑稽) [notice]QQ域名邮箱支持域名有限，如.COM/.CN/.NET等，有些可能不支持，注册域名时请斟酌选择。[/notice]</p>
+<p><img src="https://www.imsean.cn/usr/uploads/2020/03/428455539.png#vwid=784&vhei=570" class="lazyload" data-srcset="https://www.imsean.cn/usr/uploads/2020/03/428455539.png#vwid=784&vhei=570" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="Mailer配置.png"></p>
+<p>[notice]这里需要注意，填写密码时，请先前往QQ邮箱设置中账户页下的POP3/IMAP/SMTP服务中开启POP3/SMTP服务，验证您的身份后就会生成一个授权码，将生成的授权码填写至密码一栏即可。如果出现发送指令失败的服务，可以更换端口与协议重试后即可[/notice]</p>
+<p>到这里，插件基本上就配置完了。如果你也和我一样使用<code>VOID</code>主题，那么到这里就设置完成了；但如果你使用的是其他主题，你需要将一下代码添加至你博客评论的文件中（一般为comments.php）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;span&gt;</span><br><span class="line">  &lt;input name&#x3D;&quot;receiveMail&quot; type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;yes&quot; checked &#x2F;&gt;</span><br><span class="line">  &lt;label for&#x3D;&quot;receiveMail&quot;&gt;&lt;strong&gt;接收&lt;&#x2F;strong&gt;邮件通知&lt;&#x2F;label&gt;</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>你还可以更改发件模板，让你的邮件看起来更加棒！这边我也提供我使用的两个模板：</p>
+<p><strong>针对博主的邮件模板</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;width: 620px;height: auto;border-radius: 5px;margin:0 auto;box-shadow: 0px 0px 20px #888888;position: relative;&quot;&gt;</span><br><span class="line">    &lt;div style&#x3D;&quot;background-image: url(https:&#x2F;&#x2F;img.moegirl.org&#x2F;common&#x2F;b&#x2F;b9&#x2F;%E6%8A%98%E6%9C%A8.jpg);width:620px;height: 287px;background-size: cover;background-repeat: no-repeat;border-radius: 5px 5px 0px 0px;&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div style&#x3D;&quot;background-color:white;line-height:180%;padding:0 15px 12px;width:520px;margin:10px auto;color:#555555;font-family:&#39;Century Gothic&#39;,&#39;Trebuchet MS&#39;,&#39;Hiragino Sans GB&#39;,微软雅黑,&#39;Microsoft Yahei&#39;,Tahoma,Helvetica,Arial,&#39;SimSun&#39;,sans-serif;font-size:12px;margin-bottom: 0px;&quot;&gt;</span><br><span class="line">        &lt;h2 style&#x3D;&quot;font-size:14px;font-weight:normal;padding:13px 0 10px 8px;&quot;&gt;&lt;span style&#x3D;&quot;color: #ff7272;font-weight: bold;&quot;&gt;&lt;&#x2F;span&gt;Master！您编撰的文章 &lt;a style&#x3D;&quot;text-decoration:none;color: #ff7272;&quot; href&#x3D;&quot;&#123;&#123;post_permalink&#125;&#125;&quot; target&#x3D;&quot;_blank&quot;&gt;《&#123;&#123;post_title&#125;&#125;》&lt;&#x2F;a&gt; 有了新的回复呐~&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;div style&#x3D;&quot;padding:0 12px 0 12px;margin-top:18px&quot;&gt;</span><br><span class="line">            &lt;p&gt;&lt;strong&gt;&#123;&#123;comment_author_name&#125;&#125;&lt;&#x2F;strong&gt;&amp;nbsp;给您的评论：&lt;&#x2F;p&gt;</span><br><span class="line">            &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">                .comment&gt;img&#123;margin: 0px 6px 5px 6px;width: 25px;&#125;</span><br><span class="line">            &lt;&#x2F;style&gt;</span><br><span class="line">            &lt;p class&#x3D;&quot;comment&quot; style&#x3D;&quot;background-color: #f5f5f5;border: 0px solid #DDD;border-radius: 5px;padding: 10px 15px;margin:18px 0&quot;&gt;&#123;&#123;comment_content&#125;&#125;&lt;&#x2F;p&gt;</span><br><span class="line">            &lt;p&gt;其他信息：&lt;&#x2F;p&gt;</span><br><span class="line">            &lt;p style&#x3D;&quot;background-color: #f5f5f5;border: 0px solid #DDD;border-radius: 5px;padding: 10px 15px;margin:18px 0&quot;&gt;IP Address：&#123;&#123;ip&#125;&#125;&lt;br &#x2F;&gt;Mail：&lt;a style&#x3D;&quot;text-decoration:none;color: #ff7272;&quot; href&#x3D;&quot;mailto:&#123;&#123;comment_author_mail&#125;&#125;&quot;&gt;&#123;&#123;comment_author_mail&#125;&#125;&lt;&#x2F;a&gt;&lt;br &#x2F;&gt;Status：&#123;&#123;status&#125;&#125; [&lt;a style&#x3D;&quot;text-decoration:none;color: #ff7272;&quot; href&#x3D;&#39;&#123;&#123;manage_url&#125;&#125;&#39; target&#x3D;&#39;_blank&#39;&gt;管理评论&lt;&#x2F;a&gt;]&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;a style&#x3D;&quot;text-decoration: none;color: rgb(255, 255, 255);width: 40%;text-align: center;background-color: rgb(255, 114, 114);height: 40px;line-height: 40px;box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);display: block;margin: auto;&quot; href&#x3D;&quot;&#123;&#123;comment_permalink&#125;&#125;&quot; target&#x3D;&quot;_blank&quot;&gt;点击查看完整內容&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;div style&#x3D;&quot;color:#8c8c8c;;font-family: &#39;Century Gothic&#39;,&#39;Trebuchet MS&#39;,&#39;Hiragino Sans GB&#39;,微软雅黑,&#39;Microsoft Yahei&#39;,Tahoma,Helvetica,Arial,&#39;SimSun&#39;,sans-serif;font-size: 10px;width: 100%;text-align: center; padding-bottom: 1px;&quot;&gt;</span><br><span class="line">        &lt;p&gt;©2019 - 2020 Copyright  &#123;&#123;site_name&#125;&#125; &lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>针对访客的邮件模板</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;width: 620px;height: auto;border-radius: 5px;margin:0 auto;box-shadow: 0px 0px 20px #888888;position: relative;padding-bottom: 5px;&quot;&gt;</span><br><span class="line">    &lt;div style&#x3D;&quot;background-image: url(https:&#x2F;&#x2F;img.moegirl.org&#x2F;common&#x2F;b&#x2F;b9&#x2F;%E6%8A%98%E6%9C%A8.jpg);width:620px;height: 287px;background-size: cover;background-repeat: no-repeat;border-radius: 5px 5px 0px 0px;&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div style&#x3D;&quot;width: 200px;height: 40px;background-color: rgb(255, 114, 114);margin-top: -20px;margin-left: 20px;box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);color: rgb(255, 255, 255);text-align: center;line-height: 40px;&quot;&gt;Dear： &#123;&#123;comment_parent_author_name&#125;&#125; &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div style&#x3D;&quot;background-color:white;line-height:180%;padding:0 15px 12px;width:520px;margin:30px auto;color:#555555;font-family:&#39;Century Gothic&#39;,&#39;Trebuchet MS&#39;,&#39;Hiragino Sans GB&#39;,微软雅黑,&#39;Microsoft Yahei&#39;,Tahoma,Helvetica,Arial,&#39;SimSun&#39;,sans-serif;font-size:12px;margin-bottom: 0px;&quot;&gt;  </span><br><span class="line">        &lt;h2 style&#x3D;&quot;font-size:14px;font-weight:normal;padding:13px 0 10px 8px;&quot;&gt;&lt;span style&#x3D;&quot;color: #12ADDB;font-weight: bold;&quot;&gt;&lt;&#x2F;span&gt;您在 &lt;a style&#x3D;&quot;text-decoration:none;color: #ff7272;&quot; href&#x3D;&quot;&#123;&#123;post_permalink&#125;&#125;&quot; target&#x3D;&quot;_blank&quot;&gt;《&#123;&#123;post_title&#125;&#125;》&lt;&#x2F;a&gt; 中的评论有了新的回复呐~&lt;&#x2F;h2&gt;  </span><br><span class="line">        &lt;div style&#x3D;&quot;padding:0 12px 0 12px;margin-top:18px&quot;&gt;</span><br><span class="line">            &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">                .comment&gt;img&#123;margin: 0px 6px 5px 6px;width: 25px;&#125;</span><br><span class="line">            &lt;&#x2F;style&gt;</span><br><span class="line">            &lt;p&gt;您的评论：&lt;&#x2F;p&gt;  </span><br><span class="line">            &lt;p class&#x3D;&quot;comment&quot; style&#x3D;&quot;background-color: #f5f5f5;border: 0px solid #DDD;border-radius: 5px;padding: 10px 15px;margin:18px 0&quot;&gt;&#123;&#123;comment_parent_content&#125;&#125;&lt;&#x2F;p&gt;  </span><br><span class="line">            &lt;p&gt;&lt;strong&gt;&#123;&#123;comment_author_name&#125;&#125;&lt;&#x2F;strong&gt;&amp;nbsp;给您的回复：&lt;&#x2F;p&gt;  </span><br><span class="line">            &lt;p class&#x3D;&quot;comment&quot; style&#x3D;&quot;background-color: #f5f5f5;border: 0px solid #DDD;border-radius: 5px;padding: 10px 15px;margin:18px 0&quot;&gt;&#123;&#123;comment_content&#125;&#125;&lt;&#x2F;p&gt;  </span><br><span class="line">        &lt;&#x2F;div&gt;  </span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div style&#x3D;&quot;color:#8c8c8c;;font-family: &#39;Century Gothic&#39;,&#39;Trebuchet MS&#39;,&#39;Hiragino Sans GB&#39;,微软雅黑,&#39;Microsoft Yahei&#39;,Tahoma,Helvetica,Arial,&#39;SimSun&#39;,sans-serif;font-size: 10px;width: 100%;text-align: center;word-wrap:break-word;margin-top: -30px;&quot;&gt;</span><br><span class="line">        &lt;p style&#x3D;&quot;padding:20px;&quot;&gt;喜欢这里的话，那以后，这里就是你的家了！——《罗小黑战记》&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;a style&#x3D;&quot;text-decoration:none; color:#FFF;width: 40%;text-align: center;background-color:#ff7272;height: 40px;line-height: 35px;box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.30);margin: -10px auto;display: block;&quot; href&#x3D;&quot;&#123;&#123;comment_permalink&#125;&#125;&quot; target&#x3D;&quot;_blank&quot;&gt;点击查看完整內容&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;div style&#x3D;&quot;color:#8c8c8c;;font-family: &#39;Century Gothic&#39;,&#39;Trebuchet MS&#39;,&#39;Hiragino Sans GB&#39;,微软雅黑,&#39;Microsoft Yahei&#39;,Tahoma,Helvetica,Arial,&#39;SimSun&#39;,sans-serif;font-size: 10px;width: 100%;text-align: center;margin-top: 30px;&quot;&gt;</span><br><span class="line">        &lt;p&gt;本邮件由：最爱Master的邮箱姬 自动发送，请勿直接回复呐~&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div style&#x3D;&quot;color:#8c8c8c;;font-family: &#39;Century Gothic&#39;,&#39;Trebuchet MS&#39;,&#39;Hiragino Sans GB&#39;,微软雅黑,&#39;Microsoft Yahei&#39;,Tahoma,Helvetica,Arial,&#39;SimSun&#39;,sans-serif;font-size: 10px;width: 100%;text-align: center;padding-bottom: 1px;&quot;&gt;</span><br><span class="line">        &lt;p&gt;©2019-2020 Copyright &#123;&#123;site_name&#125;&#125;&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>[notice]上述代码可能会有显示误差，COPY后注意格式！[/notice]</p>
+<p>到这里就设置成功啦，最后附上邮箱模板的效果图。</p>
+<p><img src="https://www.imsean.cn/usr/uploads/2020/03/2451110662.png#vwid=670&vhei=718" class="lazyload" data-srcset="https://www.imsean.cn/usr/uploads/2020/03/2451110662.png#vwid=670&vhei=718" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="博主邮件模板示范图.png"> <img src="https://www.imsean.cn/usr/uploads/2020/03/4021264260.png#vwid=616&vhei=733" class="lazyload" data-srcset="https://www.imsean.cn/usr/uploads/2020/03/4021264260.png#vwid=616&vhei=733" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="访客邮件模板示例图.png"></p>
+<p><strong>后记</strong><br><em>代码部分版权归属<a target="_blank" rel="noopener" href="https://zhebk.cn/Web/Mailer.html">纸盒博客</a> <a target="_blank" rel="noopener" href="https://blog.imalan.cn/archives/349/">无文字</a></em></p>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>感谢你看到这里！</p>
+
+              
+            
+              
+                <p>Sean’s Blog 遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接: <a href=https://blog.imsean.cn/articles/Typecho-Plugins-Mailer/>https://blog.imsean.cn/articles/Typecho-Plugins-Mailer/</a></p>
+              
+            
+              
+                <p>转载本文请标注作者及出处，侵权必究！！</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-10T06:49:00+00:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年3月10日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%8A%80%E6%9C%AF%E5%90%91/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>技术向</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BD%91%E7%AB%99/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>网站</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BD%93%E9%AA%8C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>体验</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%96%B0%E5%B0%9D%E8%AF%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>新尝试</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Mailer/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Mailer</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Typecho/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Typecho</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://blog.imsean.cn/articles/Typecho-Plugins-Mailer/&title=Mailer加持，让博客体验更完善 - Sean's Blog&summary=现在，你可以收到评论回复啦！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer"
+          
+            href="https://t.me/share/url?url=https://blog.imsean.cn/articles/Typecho-Plugins-Mailer/&text=Mailer加持，让博客体验更完善 - Sean's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/articles/happy-seventeen-brithday/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Happy Seventeen Birthday！</p>
+          <p class='content'>拾期？拾七？十七！Bingo！
+原来都很看重这一天，但现在都释怀了，但还是抑制不住内心的喜悦呢。 :@(脸红) 
+17年前的今天我出生了，代表着这个世界上又多了一个小可爱嘻嘻
+未来请多指教，17...</p>
+        </a>
+      
+      
+        <a class='next' href='/articles/Microsofr-Edge-experience/'>
+          <p class='title'>基于Chromium的新版Edge体验报告<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>从去年开始，由于占有率下滑，就一直听说微软已经开发了基于Chromium的新版Edge浏览器。据说当时放出消息时就可以下载Preview版本来试用了。
+当时的我可能嫌麻烦（也有极大的可能就是懒 ...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="disqus_thread"></div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Mailer加持，让博客体验更完善";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  // header 这里无论是否开启pjax都需要
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
+    
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/arom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+              </a>
+            
+          
+            
+              <a href="https://www.instagram.com/pems002"
+                class="social fab fa-instagram flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+              </a>
+            
+          
+            
+              <a href="https://weibo.com/u/3225834177"
+                class="social fab fa-weibo flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+              </a>
+            
+          
+            
+              <a href="https://t.me/pems002"
+                class="social fab fa-telegram flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+              </a>
+            
+          
+            
+              <a href="mailto:admin@mail.imsean.cn"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2019-2021 Sean’s Blog</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
+/********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
+function loadScript(src, cb) {
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
+</script>
+
+
+<!-- internal -->
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+	
+	  loadScript('/js/issues.js');
+	
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: [],
+	maxRPS: 5,
+	hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    // from: https://github.com/ChrAlpha/hexo-theme-cards/blob/master/layout/_plugins/comments/disqusjs/source.ejs
+	function loadDisqusJS() {
+	   loadScript('https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqus.js', pjax_DisqusJS)
+	   loadCSS('https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqusjs.css')
+	}
+     let path = pdata.commentPath;
+     if (path.length == 0) {
+       let defaultPath = 'https://disqus.imsean.cn/api/';
+       path = defaultPath || decodeURI(window.location.pathname);
+     }
+	pjax_DisqusJS = () => {
+		new DisqusJS(Object.assign({"path":"https://disqus.imsean.cn/api/","shortname":"pems002","api":"https://disqus.imsean.cn/api/","apikey":"eROmKtZdk5hRAb8Q5d4oaKwvRCIgWUpMmJmz2z7PgWPpnb8R4V01zLd6nuTnU37k","admin":"pems002","nesting":4}, {
+			siteName: 'Sean&#39;s Blog',
+			url: 'https://blog.imsean.cn/articles/Typecho-Plugins-Mailer/',
+			identifier: path,
+		}));
+	};
+	var runningOnBrowser = typeof window !== "undefined";
+	var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+	var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+	if (!isBot && supportsIntersectionObserver) {
+		var comment_observer = new IntersectionObserver(function(entries) {
+			if (entries[0].isIntersecting) {
+				loadDisqusJS();
+				comment_observer.disconnect();
+			}
+		}, { threshold: [0] });
+		comment_observer.observe(document.getElementById('comments'));
+	} else {
+		loadDisqusJS();
+	}
+	volantis.pjax.push(pjax_DisqusJS);
+</script>
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('/js/search/hexo.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
+    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'https://blog.imsean.cn' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'https://blog.imsean.cn' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'https://blog.imsean.cn' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+
+
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
+      } catch (e) {
+        console.log(e);
+      }
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>
